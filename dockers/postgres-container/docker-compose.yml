@@ -7,6 +7,6 @@ services:
       POSTGRES_USER: egas
       POSTGRES_PASSWORD: 13160008
     volumes:
-      - ./.:/var/lib/postgresql/data
+      - /root/ansible/dockers/postgres-container:/var/lib/postgresql/data
     ports:
       - "5433:5433"
