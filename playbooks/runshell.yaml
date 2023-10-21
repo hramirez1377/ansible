@@ -1,6 +1,6 @@
 - name: Transfer and execute a script.
   hosts: all
+  become: true
   tasks:
-
-    - name: Copy and Execute the script
-      script: /home/root/test.sh
+      - name: Copy and Execute the script
+      script: ./root/test.sh
