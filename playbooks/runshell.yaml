@@ -4,3 +4,8 @@
   tasks:
       - name: Copy and Execute the script
         shell: ./home/civostatsd/test.sh
+        register: script_output
+
+      - name: Mostrar la salida del script
+        debug:
+          var: script_output.stdout_lines
