@@ -1,5 +1,5 @@
 - name: Ejecutar comando echo y redirigir la salida a un archivo
-  hosts: your_target_host
+  hosts: all
   become: true
   vars:
     nombre: "TuNombre"  # Define la variable nombre con el valor que desees
