@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes  # Permite que Ansible ejecute tareas como superusuario
+
+  tasks:
+    - name: Stop Apache
+      systemd:
+        name: apache2
+        state: stopped
