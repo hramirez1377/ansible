@@ -1,11 +1,6 @@
-- name: Ejecutar el comando echo y mostrar la salida
-  hosts: all
-  become: true
+---
+- hosts: all
   tasks:
-    - name: Ejecutar el comando echo
-      shell: echo "Hola"
-      register: echo_output
-
-    - name: Mostrar la salida del comando echo
-      debug:
-        var: echo_output.stdout_lines
+    - shell: echo "hello world"
+      register: out
+    - debug: var=out
