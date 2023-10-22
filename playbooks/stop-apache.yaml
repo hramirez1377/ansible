@@ -3,7 +3,7 @@
   become: yes  # Permite que Ansible ejecute tareas como superusuario
 
   tasks:
-    - name: Stop Apache
+    - name: Restart Apache
       systemd:
         name: apache2
-        state: stopped
+        state: restarted  #stopped
