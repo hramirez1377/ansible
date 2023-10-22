@@ -1,8 +1,11 @@
-- name: Ejecutar comando echo y redirigir la salida a un archivo
-  hosts: all
+- name: Ejecutar el comando echo y mostrar la salida
+  hosts: your_target_host
   become: true
-  vars:
-    nombre: "TuNombre"  # Define la variable nombre con el valor que desees
   tasks:
     - name: Ejecutar el comando echo
-      command: echo "Hola, {{ nombre }}" > file.txt
+      shell: echo "Hola, $nombre"
+      register: echo_output
+
+    - name: Mostrar la salida del comando echo
+      debug:
+        var: echo_output.stdout_lines
