@@ -7,3 +7,5 @@
       apt:
         upgrade: yes
         update_cache: yes
+    vars:
+      ansible_become_password: lAkd&4QkdK
