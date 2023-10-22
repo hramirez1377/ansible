@@ -1,9 +1,9 @@
 - name: Transfer and execute a script.
   hosts: all
-  become: true
+  become_user: devops
   tasks:
-      - name: Copy and Execute the script
-        shell: ./home/civostatsd/test.sh
+      - name: Execute the script
+        shell: /home/devops/test.sh
         register: script_output
 
       - name: Mostrar la salida del script
