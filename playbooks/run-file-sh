@@ -1,0 +1,6 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Ejecutar script shell
+      command: /home/devops/test.sh
