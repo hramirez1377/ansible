@@ -6,3 +6,7 @@
       file:
         path: "/home/devops/hernan.txt"
         state: touch
+    - name: Add content to the file
+      copy:
+        content: "Este es el contenido que deseas agregar al archivo.\nOtra línea de contenido."
+        dest: "/home/devops/hernan.txt"
