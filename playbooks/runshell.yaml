@@ -1,11 +1,15 @@
-- name: Transfer and execute a script.
+- name: Transfer and execute a script
   hosts: all
   become_user: devops
   tasks:
-      - name: Execute the script
-        shell: /home/devops/test.sh
-        register: script_output
+    - name: Define script path
+      set_fact:
+        script_path: "{{ ansible_env.HOME }}/test.sh"
 
-      - name: Mostrar la salida del script
-        debug:
-          var: script_output.stdout_lines
+    - name: Execute the script
+      command: "{{ script_path }}"
+      register: script_output
+
+    - name: Mostrar la salida del script
+      debug:
+        var: script_output.stdout_lines
