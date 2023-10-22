@@ -1,5 +1,5 @@
 - name: Ejecutar el comando echo y mostrar la salida
-  hosts: your_target_host
+  hosts: all
   become: true
   tasks:
     - name: Ejecutar el comando echo
