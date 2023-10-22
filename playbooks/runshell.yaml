@@ -1,15 +1,6 @@
-- name: Transfer and execute a script
+- name: Ejecutar comando echo y redirigir la salida a un archivo
   hosts: all
-  become_user: devops
+  become: true
   tasks:
-    - name: Define script path
-      set_fact:
-        script_path: "{{ ansible_env.HOME }}/test.sh"
-
-    - name: Execute the script
-      command: "{{ script_path }}"
-      register: script_output
-
-    - name: Mostrar la salida del script
-      debug:
-        var: script_output.stdout_lines
+    - name: Ejecutar el comando echo
+      command: echo "Hola, $nombre" > file.txt
