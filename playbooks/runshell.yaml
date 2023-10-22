@@ -3,7 +3,7 @@
   become: true
   tasks:
     - name: Ejecutar el comando echo
-      shell: echo "Hola, $nombre"
+      shell: echo "Hola"
       register: echo_output
 
     - name: Mostrar la salida del comando echo
