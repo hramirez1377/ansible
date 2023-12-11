@@ -1,0 +1,32 @@
+version: "3"
+services:
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: egas
+      POSTGRES_PASSWORD: egas13160008
+      POSTGRES_USER: egas
+    logging:
+      driver: "none"
+    restart: unless-stopped
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  wiki:
+    image: ghcr.io/requarks/wiki:2
+    depends_on:
+      - db
+    environment:
+      DB_TYPE: postgres
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: egas
+      DB_PASS: egas13160008
+      DB_NAME: egas
+    restart: unless-stopped
+    ports:
+      - "8081:3000"
+
+volumes:
+  db-data:
