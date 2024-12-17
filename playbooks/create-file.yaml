@@ -4,9 +4,9 @@
   tasks:
     - name: Creating an empty file
       file:
-        path: "/home/devops/hernan.txt"
+        path: "/home/hramirez/hernan.txt"
         state: touch
     - name: Add content to the file
       copy:
         content: "Este es el contenido que deseas agregar al archivo.\nOtra línea de contenido."
-        dest: "/home/devops/hernan.txt"
+        dest: "/home/hramirez/hernan.txt"
