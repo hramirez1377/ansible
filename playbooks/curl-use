@@ -5,11 +5,7 @@
     dest_path: "/home/root/configuration.xml"
 
   tasks:
-    - name: Descargar archivo usando curl con manejo de errores
-      command: curl --fail -o {{ dest_path }} {{ download_url }}
-      register: curl_result
-      failed_when: curl_result.rc != 0
-
-    - name: Mostrar resultado de la descarga
-      debug:
-        var: curl_result
+   - hosts: all
+  tasks:
+    - name: Descargar archivo usando wget
+      command: wget -O /home/root/lopez.xml "https://www.file.io/h0gN/download/ayB0drgbyspS"
