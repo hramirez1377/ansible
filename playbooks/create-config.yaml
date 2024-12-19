@@ -1,7 +1,7 @@
-- hosts: all
+- name: Descargar archivo desde file.io
+  hosts: localhost
   tasks:
-    - name: Download file from file.io
+    - name: Descargar el archivo desde la URL
       get_url:
         url: "https://www.file.io/h0gN/download/ayB0drgbyspS"
         dest: "/home/hramirez/configFile.xml"
-        mode: '0644'  # Opcional: para establecer permisos adecuados
