@@ -11,4 +11,4 @@
             <PuertoTCP>8080</PuertoTCP>
             <Bomba>1</Bomba>
           </Configuracion>
-        dest: "/home/hramirez/configuracion.xml"
+        dest: "/home/root/configuracion.xml"
