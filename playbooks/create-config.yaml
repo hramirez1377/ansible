@@ -6,3 +6,4 @@
         method: GET
         return_content: yes  # Esto asegura que el contenido del archivo se descargue
         dest: "/home/hramirez/Configuracion.xml"  # Ruta de destino donde guardar el archivo
+        validate_certs: no 
