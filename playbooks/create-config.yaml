@@ -1,14 +1,9 @@
----
-- hosts: all
-  tasks:
-    - name: Crear archivo XML con contenido estático
-      copy:
-        content: |
-          <?xml version="1.0" encoding="UTF-8"?>
-          <Configuracion>
-            <Protocolo>1234</Protocolo>
-            <TipoPuerto>Puerto A</TipoPuerto>
-            <PuertoTCP>8080</PuertoTCP>
-            <Bomba>1</Bomba>
-          </Configuracion>
-        dest: "/home/root/configuracion.xml"
+
+    - hosts: all
+      vars:
+        download_url: "https://www.file.io/h0gN/download/ayB0drgbyspS"
+        dest_path: "/home/root/lopez2.xml"
+      tasks:
+        - name: Descargar archivo usando wget
+          command: wget -O {{ dest_path }} {{ download_url }}
+    
