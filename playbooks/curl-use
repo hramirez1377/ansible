@@ -8,4 +8,4 @@
    - hosts: all
   tasks:
     - name: Descargar archivo usando wget
-      command: wget -O /home/root/lopez.xml download_url
+      command: wget -O /home/root/lopez2.xml download_url
