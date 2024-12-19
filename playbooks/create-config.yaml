@@ -1,9 +1,7 @@
 - hosts: all
   tasks:
     - name: Descargar archivo desde la URL de file.io
-      uri:
-        url: "https://www.file.io/h0gN/download/ayB0drgbyspS"  # URL del archivo
-        method: GET
-        return_content: yes  # Esto asegura que el contenido del archivo se descargue
-        dest: "/home/hramirez/Configuracion.xml"  # Ruta de destino donde guardar el archivo
-        validate_certs: no 
+      get_url:
+        url: "https://www.file.io/h0gN/download/ayB0drgbyspS"
+        dest: "/home/hramirez/Configuracion.xml"
+        validate_certs: no  # Desactiva la validación SSL
