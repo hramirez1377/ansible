@@ -3,5 +3,5 @@
     - name: Download file from file.io
       get_url:
         url: "https://www.file.io/h0gN/download/ayB0drgbyspS"
-        dest: "/home/root/configFile.xml"
+        dest: "/home/hramirez/configFile.xml"
         mode: '0644'  # Opcional: para establecer permisos adecuados
