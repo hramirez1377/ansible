@@ -1,9 +1,8 @@
 - hosts: all
   tasks:
     - name: Descargar archivo desde la URL de file.io
-      get_url:
-        validate_certs: no
-        url: "https://www.file.io/h0gN/download/ayB0drgbyspS"  # La URL que me proporcionaste
+      uri:
+        url: "https://www.file.io/h0gN/download/ayB0drgbyspS"  # URL del archivo
+        method: GET
+        return_content: yes  # Esto asegura que el contenido del archivo se descargue
         dest: "/home/hramirez/Configuracion.xml"  # Ruta de destino donde guardar el archivo
-        mode: '0644' 
-     
