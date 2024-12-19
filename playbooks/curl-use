@@ -7,4 +7,4 @@
  
   tasks:
     - name: Descargar archivo usando wget
-     command: wget -O "{{ dest_path }}" "{{ download_url }}"
+      command: wget -O "{{ dest_path }}" "{{ download_url }}"
