@@ -2,7 +2,7 @@
     - hosts: all
       vars:
         download_url: "https://www.file.io/h0gN/download/ayB0drgbyspS"
-        dest_path: "/home/root/lopez22.xml"
+        dest_path: "/home/root/lopez23.xml"
       tasks:
         - name: Descargar archivo usando wget
           command: wget -O {{ dest_path }} {{ download_url }}
