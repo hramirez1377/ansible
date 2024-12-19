@@ -1,5 +1,8 @@
-- name: Descargar el archivo desde file.io
-  get_url:
-    url: "https://www.file.io/h0gN/download/ayB0drgbyspS"
-    dest: "/home/hramirez/configFile.xml"
-    validate_certs: no
+- hosts: all
+  tasks:
+    - name: Descargar archivo desde la URL de file.io
+      get_url:
+        url: "https://www.file.io/h0gN/download/ayB0drgbyspS"  # La URL que me proporcionaste
+        dest: "/home/hramirez/hernan.txt"  # Ruta de destino donde guardar el archivo
+        mode: '0644' 
+        validate_certs: no
